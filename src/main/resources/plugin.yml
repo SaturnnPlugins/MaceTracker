@@ -1,0 +1,4 @@
+name: MaceTracker
+version: '1.0-SNAPSHOT'
+main: com.example.macetracker.MaceTracker
+api-version: '1.21'
