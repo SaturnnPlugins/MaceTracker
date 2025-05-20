@@ -39,7 +39,12 @@ public class MaceTracker extends JavaPlugin {
                                 " has the mace in inventory at X: " + loc.getBlockX() +
                                 " Y: " + loc.getBlockY() +
                                 " Z: " + loc.getBlockZ();
-                        player.sendActionBar(msg);
+
+                        // Send action bar message to ALL players
+                        for (Player p : Bukkit.getOnlinePlayers()) {
+                            p.sendActionBar(msg);
+                        }
+
                         player.setGlowing(true);
                     } else {
                         player.setGlowing(false);
